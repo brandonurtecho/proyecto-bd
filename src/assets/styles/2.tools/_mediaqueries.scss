@@ -1,0 +1,55 @@
+/* Custom, iPhone Retina */
+
+@mixin media-xs() {
+    @media only screen and (min-width: 320px) {
+        @content;
+    }
+}
+
+
+/* Extra Small Devices, Phones */
+
+@mixin media-sm($value:480px) {
+    @media only screen and (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin media-smd($value:600px) {
+    @media only screen and (min-width: $value) {
+        @content;
+    }
+}
+
+
+/* Small Devices, Tablets */
+
+@mixin media-md() {
+    @media only screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+
+/* Medium Devices, Desktops */
+
+@mixin media-lg() {
+    @media only screen and (min-width: 992px) {
+        @content;
+    }
+}
+
+
+/* Large Devices, Wide Screens */
+
+@mixin media-xl() {
+    @media only screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin media-custom($value) {
+    @media only screen and (min-width: $value) {
+        @content;
+    }
+}

@@ -1,0 +1,17 @@
+@import "./../1.settings/_index.scss";
+@import "./../2.tools/_index.scss";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+}
+body{
+    font-family: $font-primary;
+    height: 100%;
+}
+.lista_des{
+    list-style: none;
+}
