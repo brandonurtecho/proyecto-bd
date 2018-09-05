@@ -5,7 +5,8 @@
     <div class="body__container">
       <Header/>
       <carousel/>
-      <ReleaseSection/>
+      <WelcomeSection/>
+      <!-- <ReleaseSection/> -->
     </div>
   </div>
 </template>
@@ -14,7 +15,9 @@
 // import HelloWorld from './components/HelloWorld'
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
+import WelcomeSection from "./components/WelcomeSection";
 import ReleaseSection from "./components/ReleaseSection";
+
 
 export default {
   name: "App",
@@ -22,6 +25,7 @@ export default {
     // HelloWorld
     Header,
     Carousel,
+    WelcomeSection,
     ReleaseSection
   }
 };
@@ -41,7 +45,7 @@ export default {
   display: flex;
   justify-content: center;
   .body__container {
-    width: 70%;
+    width: 100%;
   }
 }
 </style>

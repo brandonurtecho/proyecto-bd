@@ -59,6 +59,11 @@ export default {
           link: "#anime",
           name: "ANIME",
           active: false
+        },
+        {
+          link: "#about",
+          name: "ABOUT",
+          active: false
         }
       ]
     };
@@ -76,8 +81,10 @@ export default {
 @import "../../src/assets/styles/1.settings/index";
 .header {
   display: flex;
+  opacity: 0.7;
   justify-content: space-between;
-  padding: 15px 0px;
+  padding: 20px 10px;
+  padding-bottom: 15px;
   // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   .header__logo {
     color: $color-font-primary;
@@ -102,7 +109,7 @@ export default {
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
         // border: solid 1px $color-font-primary;
         padding: 12px 16px;
-        z-index: 10;
+        z-index: 10;        
       }
       &:hover {
         .dropdown {
@@ -116,7 +123,7 @@ export default {
       }
       .item__name {
         color: $color-font-primary;
-        margin: 0px 10px;
+        margin: 0px 15px;
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
@@ -138,7 +145,7 @@ export default {
           content: "";
           position: absolute;
           width: 100%;
-          top: -15px;
+          top: -20px;
           height: 5px;
           background: $color-font-secondary;
           transition: all ease-in-out 0.15s;
