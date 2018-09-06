@@ -6,6 +6,9 @@
       <Header/>
       <carousel/>
       <WelcomeSection/>
+      <AboutSection/>
+      <InfoSection/>
+      <Footer/>
       <!-- <ReleaseSection/> -->
     </div>
   </div>
@@ -16,6 +19,9 @@
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
 import WelcomeSection from "./components/WelcomeSection";
+import InfoSection from "./components/InfoSection";
+import AboutSection from "./components/AboutSection";
+import Footer from "./components/Footer";
 import ReleaseSection from "./components/ReleaseSection";
 
 
@@ -26,6 +32,9 @@ export default {
     Header,
     Carousel,
     WelcomeSection,
+    InfoSection,
+    AboutSection,
+    Footer,
     ReleaseSection
   }
 };
