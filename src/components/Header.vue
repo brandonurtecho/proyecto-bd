@@ -2,14 +2,14 @@
     <div class="header">
         <a href="#default" class="header__logo">SWEETCRITICS</a>
         <div class="header__nav">
-            <div v-for="(navItem,index) in navItems" :key="index" class="nav__item" >
+            <!-- <div v-for="(navItem,index) in navItems" :key="index" class="nav__item" >
               <a :class="navItem.active?'item__name--active':'item__name'"  :href="navItem.link" @click="methodClick(index)">{{navItem.name}}</a>
               <div class="dropdown">
                 <ul v-for="dropdownItem in navItem.dropdownItems" :key="dropdownItem.index" class="dropdown__item">
                   <li>{{dropdownItem}}</li>                  
                 </ul>
               </div>              
-            </div>                              
+            </div>                               -->
         </div>
     </div>
 </template>

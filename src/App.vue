@@ -5,11 +5,10 @@
     <div class="body__container">
       <Header/>
       <carousel/>
-      <WelcomeSection/>
-      <AboutSection/>
-      <InfoSection/>
-      <Footer/>
-      <!-- <ReleaseSection/> -->
+      <DestacadoSection class="DestacadoSection" :destacadoData="destacadoData.anime"/>
+      <DestacadoSection class="DestacadoSection" :destacadoData="destacadoData.videojuego"/>
+      <DestacadoSection class="DestacadoSection" :destacadoData="destacadoData.serie"/>
+      <DestacadoSection class="DestacadoSection" :destacadoData="destacadoData.pelicula"/>
     </div>
   </div>
 </template>
@@ -18,12 +17,7 @@
 // import HelloWorld from './components/HelloWorld'
 import Header from "./components/Header";
 import Carousel from "./components/Carousel";
-import WelcomeSection from "./components/WelcomeSection";
-import InfoSection from "./components/InfoSection";
-import AboutSection from "./components/AboutSection";
-import Footer from "./components/Footer";
-import ReleaseSection from "./components/ReleaseSection";
-
+import DestacadoSection from "./components/DestacadoSection";
 
 export default {
   name: "App",
@@ -31,11 +25,45 @@ export default {
     // HelloWorld
     Header,
     Carousel,
-    WelcomeSection,
-    InfoSection,
-    AboutSection,
-    Footer,
-    ReleaseSection
+    DestacadoSection
+  },
+  data() {
+    return {
+      destacadoData: {
+        anime: {
+          title: "ANIME",
+          images: {
+            img_1: "../../static/images/img_1.jpg",
+            img_2: "../../static/images/img_1.jpg",
+            img_3: "../../static/images/img_1.jpg"
+          }
+        },
+        videojuego: {
+          title: "VIDEOJUEGOS",
+          images: {
+            img_1: "../../static/images/img_1.jpg",
+            img_2: "../../static/images/img_1.jpg",
+            img_3: "../../static/images/img_1.jpg"
+          }
+        },
+        serie: {
+          title: "SERIES",
+          images: {
+            img_1: "../../static/images/img_1.jpg",
+            img_2: "../../static/images/img_1.jpg",
+            img_3: "../../static/images/img_1.jpg"
+          }
+        },
+        pelicula: {
+          title: "PELICULAS",
+          images: {
+            img_1: "../../static/images/img_1.jpg",
+            img_2: "../../static/images/img_1.jpg",
+            img_3: "../../static/images/img_1.jpg"
+          }
+        }
+      }
+    };
   }
 };
 </script>
@@ -55,6 +83,9 @@ export default {
   justify-content: center;
   .body__container {
     width: 100%;
+    .DestacadoSection{
+      margin-top: 10px;
+    }
   }
 }
 </style>
