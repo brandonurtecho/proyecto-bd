@@ -2,14 +2,9 @@
     <div class="header">
         <a href="#default" class="header__logo">SWEETCRITICS</a>
         <div class="header__nav">
-            <!-- <div v-for="(navItem,index) in navItems" :key="index" class="nav__item" >
-              <a :class="navItem.active?'item__name--active':'item__name'"  :href="navItem.link" @click="methodClick(index)">{{navItem.name}}</a>
-              <div class="dropdown">
-                <ul v-for="dropdownItem in navItem.dropdownItems" :key="dropdownItem.index" class="dropdown__item">
-                  <li>{{dropdownItem}}</li>                  
-                </ul>
-              </div>              
-            </div>                               -->
+            <div v-for="(navItem,index) in navItems" :key="index" class="nav__item" >
+              <a :class="navItem.active?'item__name--active':'item__name'"  :href="navItem.link" @click="methodClick(index)">{{navItem.name}}</a>        
+            </div>                              
         </div>
     </div>
 </template>
@@ -33,17 +28,7 @@ export default {
         {
           link: "#juegos",
           name: "JUEGOS",
-          active: false,
-          dropdownItems: [
-            "PC",
-            "PS4",
-            "Xbox One",
-            "Switch",
-            "Wii U",
-            "3DS",
-            "Vita",
-            "IOS"
-          ]
+          active: false
         },
         {
           link: "#tv",
@@ -79,11 +64,12 @@ export default {
 
 <style lang="scss">
 @import "../../src/assets/styles/1.settings/index";
+@import "../assets/styles/2.tools/index";
 .header {
   display: flex;
-  opacity: 0.7;
   justify-content: space-between;
   padding: 20px 10px;
+  color: $color-font-secondary;
   padding-bottom: 15px;
   // box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   .header__logo {
@@ -95,22 +81,8 @@ export default {
   .header__nav {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
     .nav__item {
-      .dropdown {
-        color: $color-font-primary;
-        font-family: "arial";
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        font-weight: 500;
-        font-size: 0.9em;
-        cursor: pointer;
-        width: 150px;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-        // border: solid 1px $color-font-primary;
-        padding: 12px 16px;
-        z-index: 10;        
-      }
       &:hover {
         .dropdown {
           display: flex;
@@ -127,12 +99,12 @@ export default {
         font-size: 20px;
         font-weight: 600;
         text-decoration: none;
-        transition-duration: 0.5s;
+        transition-duration: 0.2s;
         position: relative;
 
         &:hover {
           color: $color-font-secondary;
-          transition-duration: 0.5s;
+          transition-duration: 0.2s;
         }
         &::before {
           content: "";
@@ -154,6 +126,19 @@ export default {
       .item__name--active {
         @extend .item__name;
         color: $color-font-secondary;
+      }
+    }
+  }
+  @include media-custom(925px) {
+    .header__logo {
+      display: none;
+    }
+    .header__nav {
+      .nav__item {
+        flex-basis: 100%;
+        .item__name {
+          justify-content: center;
+        }
       }
     }
   }
